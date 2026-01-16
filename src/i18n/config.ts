@@ -3,11 +3,13 @@ import { initReactI18next } from 'react-i18next'
 import en from '../../locales/en.json'
 import ar from '../../locales/ar.json'
 import fr from '../../locales/fr.json'
+import zh from '../../locales/zh.json'
 
 const resources = {
   en: { translation: en },
   ar: { translation: ar },
   fr: { translation: fr },
+  zh: { translation: zh },
 }
 
 // RTL language detection (includes languages not yet in resources for future expansion)

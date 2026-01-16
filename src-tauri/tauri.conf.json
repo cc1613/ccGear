@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri-app",
+  "productName": "ccGear",
   "version": "0.1.0",
-  "identifier": "com.tauri-app.app",
+  "identifier": "com.ccgear.dev",
   "build": {
     "removeUnusedCommands": true,
     "beforeDevCommand": "npm run dev",
@@ -13,11 +13,11 @@
   "app": {
     "windows": [
       {
-        "title": "tauri-app",
-        "width": 1000,
-        "height": 700,
-        "minWidth": 1000,
-        "minHeight": 700,
+        "title": "ccGear",
+        "width": 900,
+        "height": 650,
+        "minWidth": 800,
+        "minHeight": 600,
         "resizable": true,
         "fullscreen": false,
         "maximized": false,
@@ -45,11 +45,11 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "publisher": "Your Name",
+    "publisher": "cc1613",
     "category": "DeveloperTool",
-    "shortDescription": "A Tauri React template application",
-    "longDescription": "A modern Tauri React template with comprehensive boilerplate code, TypeScript, Tailwind CSS, and shadcn/ui components.",
-    "copyright": "Copyright © 2025 Your Name. All rights reserved.",
+    "shortDescription": "Claude Code Configuration Tool",
+    "longDescription": "A desktop application for configuring Claude Code settings including custom models, MCP servers, permissions, and environment variables.",
+    "copyright": "Copyright 2025 cc1613. All rights reserved.",
     "macOS": {
       "frameworks": [],
       "minimumSystemVersion": "10.15",
