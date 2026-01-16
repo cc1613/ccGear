@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Save, Moon, Sun, Languages } from 'lucide-react'
+import { Save, Moon, Sun, Languages, Minus, Square, X } from 'lucide-react'
 import { toast } from 'sonner'
+import { getCurrentWindow } from '@tauri-apps/api/window'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -87,6 +88,18 @@ export function CcGearLayout() {
     i18n.changeLanguage(lang)
   }
 
+  const handleMinimize = () => {
+    getCurrentWindow().minimize()
+  }
+
+  const handleMaximize = () => {
+    getCurrentWindow().toggleMaximize()
+  }
+
+  const handleClose = () => {
+    getCurrentWindow().close()
+  }
+
   const renderContent = () => {
     switch (activeFeature) {
       case 'models':
@@ -156,6 +169,32 @@ export function CcGearLayout() {
             <Save className="h-4 w-4 mr-2" />
             {t('common.save')}
           </Button>
+          <div className="flex items-center ml-2 border-l pl-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleMinimize}
+              className="h-8 w-8"
+            >
+              <Minus className="h-4 w-4" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleMaximize}
+              className="h-8 w-8"
+            >
+              <Square className="h-3 w-3" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClose}
+              className="h-8 w-8 hover:bg-red-500 hover:text-white"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </div>
 
